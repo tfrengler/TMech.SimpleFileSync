@@ -1,0 +1,23 @@
+Our events:
+
+Create (file is initially empty)
+Move
+Rename
+Modify (content, not attributes)
+
+OS events:
+
+Created:
+	Created
+	Renamed
+
+- This is a super generic event and can mean the attributes changed, size, last-write, last accessed etc
+Modified:
+	Changed
+
+Moved:
+	Deleted
+	Created
+
+Renamed:
+	Renamed
