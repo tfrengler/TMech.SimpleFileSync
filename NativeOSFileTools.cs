@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-namespace FileWatcher
+namespace TMech.SFS
 {
     internal static partial class NativeOSFileTools
     {

@@ -1,4 +1,4 @@
-﻿namespace FileWatcher
+﻿namespace TMech.SFS
 {
     public enum CommandDirection
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FileWatcher
+namespace TMech.SFS
 {
     public sealed class UploadManager
     {

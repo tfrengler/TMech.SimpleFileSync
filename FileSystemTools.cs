@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace FileWatcher
+namespace TMech.SFS
 {
     public static class FileSystemTools
     {

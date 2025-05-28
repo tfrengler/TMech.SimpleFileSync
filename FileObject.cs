@@ -1,13 +1,12 @@
 ﻿using System.IO;
 using System.IO.Hashing;
 
-namespace FileWatcher
+namespace TMech.SFS
 {
     public sealed record FileRecord
     {
         public long Id { get; set; }
         public long UniqueId { get; set; }
-        /// <summary>Relative path from the root watch folder</summary>
         public string Path { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public long Size { get; set; }
@@ -62,14 +61,17 @@ namespace FileWatcher
             return ContentChecksum;
         }
 
+        /// <summary>Creates a new instance from a FileInfo-instance but does not calculate and set the checksum.</summary>
         public static FileRecord FromFileInfo(FileInfo fileInfo)
         {
-            var ReturnData = new FileRecord();
-            ReturnData.Path = fileInfo.Directory!.FullName;
-            ReturnData.Name = fileInfo.Name;
-            ReturnData.DateTimeCreated = fileInfo.CreationTimeUtc;
-            ReturnData.DateTimeModified = fileInfo.LastWriteTimeUtc;
-            ReturnData.Size = fileInfo.Length;
+            var ReturnData = new FileRecord
+            {
+                Path = fileInfo.Directory!.FullName,
+                Name = fileInfo.Name,
+                DateTimeCreated = fileInfo.CreationTimeUtc,
+                DateTimeModified = fileInfo.LastWriteTimeUtc,
+                Size = fileInfo.Length
+            };
 
             return ReturnData;
         }
